@@ -6,9 +6,9 @@ resources:
     branch: master
 
 jobs:
-- name: test-app
+- name: test-job
   plan:
   - get: flight-school
     trigger: true
-  - task: tests
+  - task: a-test-task-within-this-build-plan
     file: flight-school/ci/build-task.yml
