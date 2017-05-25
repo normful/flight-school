@@ -1,3 +1,5 @@
+# A Concourse Task
+--- 
 platform: linux
 
 image_resource:

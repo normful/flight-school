@@ -1,3 +1,7 @@
+# Pipeline
+---
+
+# Resource
 resources:
 - name: flight-school
   type: git
@@ -6,9 +10,13 @@ resources:
     branch: master
 
 jobs:
+  # Job
 - name: test-job
+  # Build Plan
   plan:
+    # a `get` step
   - get: flight-school
     trigger: true
-  - task: a-test-task-within-this-build-plan
+    # a `task` step
+  - task: test-task
     file: flight-school/ci/build-task.yml
